@@ -2,8 +2,7 @@ import { Component, inject } from '@angular/core';
 import { MatIconModule } from '@angular/material/icon';
 import { ICellRendererAngularComp } from 'ag-grid-angular';
 import { ICellRendererParams } from 'ag-grid-community';
-// import { EmployeeService } from '../../services/employee/employee.service';
-// import { MatDialogModule } from '@angular/material/dialog'
+
 import {MatDialogModule} from '@angular/material/dialog';
 @Component({
   selector: 'app-action',
@@ -16,11 +15,9 @@ import {MatDialogModule} from '@angular/material/dialog';
   styleUrl: './action.component.scss'
 })
 export class ActionComponent implements ICellRendererAngularComp {
-  // http = inject(EmployeeService)
-  // dialog = inject(MatDialog)
+
   public value!: string;
   data: any;
-  // agInit(params: ICellRendererParams) { this.value = params.value }
 
   agInit(params: any): void {
     this.params = params;
